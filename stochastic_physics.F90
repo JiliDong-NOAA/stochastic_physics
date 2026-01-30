@@ -443,7 +443,7 @@ if ( lndp_type .EQ. 2  ) then
       mask(lndp_i) = (trim(lndp_var_list(lndp_i)) /= 'smc') .and. (trim(lndp_var_list(lndp_i)) /= 'stc')
     end do 
     new_list = pack(lndp_var_list, mask)
-    do lndp_i =1,size(lndp_var_list)
+    do lndp_i =1,size(new_list)
       if   (new_list(lndp_i) .EQ. 'XXX')   then
         cycle
       else
